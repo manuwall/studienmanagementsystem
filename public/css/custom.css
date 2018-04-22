@@ -1,0 +1,66 @@
+button {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.row {
+    padding: auto;
+}
+
+#dashboard-subtitle {
+    margin-left: 27px;
+}
+
+#dashboard-row1 {
+    margin-top: 35px;
+    margin-bottom: 35px;    
+}
+
+#dashboard-row2 {
+    margin-top: 35px;
+}
+
+#dashboard-div3 {
+    background-color: silver;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 40px;
+    padding: 20px;
+    padding-bottom: 3.0rem;
+    border-bottom-style: groove;
+    border-right-style: groove;
+}
+
+#dashboard-div3:hover {
+    border-bottom-color: #007bff;
+}
+
+#project_name {
+    font-size: 2.25rem;
+}
+
+#site-header {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#single-patient {
+    border-radius: 8px;
+    background-color: silver;
+    margin-top: 20px;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+#btnEdit {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#single-patient-text {
+    padding-top: 10px;
+}
+
+#single-patient-name {
+    margin-top: 7px;
+}
