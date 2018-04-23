@@ -10,6 +10,7 @@
                 <div>
                     <label for="vorname">Vorname</label>
                     <input type="text" class="form-control" id="vorname" placeholder="first name" required="true">
+                </div>
                 <div>
                     <label for="nachname">Nachname</label>
                     <input type="text" class="form-control" id="nachname" placeholder="second name" required="true">

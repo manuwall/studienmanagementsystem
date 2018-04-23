@@ -16,4 +16,4 @@ Route::get('/login', 'PagesController@login');
 Route::get('/registration', 'PagesController@registration');
 Route::get('/dashboard', 'PagesController@dashboard');
 
-Route::resource('patients', 'PostsController');
+Route::resource('patients', 'PatientsController');

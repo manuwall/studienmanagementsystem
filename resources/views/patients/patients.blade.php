@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <h1 class="page-header col-md-6">{{$title}}</h1>
-            <button class="btn btn-success col-md-0" id="btnNeuanlage"><span>Neuanlage</span></button>
+            <button class="btn btn-success col-md-0" id="btnNeuanlage" onclick="location.href='patients/create';"><span>Neuanlage</span></button>
             <button class="btn btn-danger col-md-0" id="btnLogout"><span>Logout</span></button>
             
         </div>
@@ -29,4 +29,5 @@
             <p>Keine Patienten vorhanden</p>
         @endif
     </div>
+</div>
 @endsection

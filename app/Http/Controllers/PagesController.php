@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
 
     public function index() {
-        $title = "Studienmanagesystem";
+        $title = "Studienmanagementsystem";
         $subtitle = "Klinische Studien leicht gemacht";
         return view('pages.index')->with('title', $title)->with('subtitle', $subtitle);
     }
