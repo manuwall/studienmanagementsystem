@@ -15,6 +15,7 @@
         <div class="table">
             <table>
                 <tr>
+                    <th>PatientenID</th>
                     <th>Vorname</th>
                     <th>Nachname</th>
                     <th>Geburtsdatum</th>
