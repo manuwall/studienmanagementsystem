@@ -1,6 +1,7 @@
 @extends('layouts.template')
 
 @section('content')
+
 <div class="jumbotron">
     <div class="container">
         <div class="row">
@@ -16,15 +17,16 @@
             <?php //LISTE VON CRF-BAUSTEINEN ?>
             <div class="col-md-2" style="background-color: aquamarine">
                 SPALTE FÜR BAUSTEIN-BUTTONS!
+                <input class="btn btn-primary" type="button" value="Checkbox" id="showHideBtn">
             </div>
 
             <?php //EINGABEMASKEN ?>
             <div class="col-md-5" style="background-color: aliceblue; border-width: thin">
                 <div class="">
-                    <p style="margin-bottom: 0px; margin-top: 15px"><b>Baustein: Checkbox</b></p>
-                    <form class="form-group">
+                    <form class="form-group hidden" style="display: none" id="showhide-form">
+                        <p style="margin-bottom: 0px; margin-top: 15px"><b>Baustein: Checkbox</b></p>
                         <input class="col-md-6" type="text" name="frage" placeholder="Frage" id="input-eingabemaske"></input>
-                        <input class="col-md-6" type="text" name="frage" placeholder="Name" id="input-eingabemaske"></input>
+                        <input class="col-md-6" type="text" name="name" placeholder="Name" id="input-eingabemaske"></input>
                         <input class="col-md-2" type="checkbox" name="required">Pflichtangabe</input>
 
                         <input class="col-md-5" type="text" name="check1" placeholder="check1" id="input-eingabemaske"></input>
@@ -49,3 +51,18 @@
 
     </div>
 @endsection
+
+<script type="text/javascript">
+    window.addEventListener("load", function() {
+        let btn = document.getElementById("showHideBtn");
+        let checkboxform = document.getElementById("showhide-form");
+        btn.addEventListener("click", function() {
+            if (checkboxform.style.display == "none") {
+                checkboxform.style.display = "block";
+            } else {
+                checkboxform.style.display = "none";
+            }
+           
+        }, false);
+    }, false);
+</script>
