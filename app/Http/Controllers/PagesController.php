@@ -31,4 +31,10 @@ class PagesController extends Controller
         return view('pages.dashboard')->with('title', $title)->with('subtitle', $subtitle);
     }
 
+    public function crfeditor() {
+        $title = 'CRF-Konfigurator';
+        $subtitle = "Erstellen Sie Ihren individuellen CRF";
+        return view('crf.createcrf')->with('title', $title)->with('subtitle', $subtitle);
+    }
+
 }

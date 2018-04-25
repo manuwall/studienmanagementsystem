@@ -14,7 +14,7 @@ class Papatient extends Model
     // Primary Key
     public $primarykey ='PaID';
     // Timestamps
-    public $timestampts = true;
+    public $timestamps = true;
 
     public function formDateOfBirthAttribute($value)
     {

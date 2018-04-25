@@ -15,5 +15,6 @@ Route::get('/', 'PagesController@index');
 Route::get('/login', 'PagesController@login');
 Route::get('/registration', 'PagesController@registration');
 Route::get('/dashboard', 'PagesController@dashboard');
+Route::get('/createcrf', 'PagesController@crfeditor');
 
 Route::resource('patients', 'PatientsController');

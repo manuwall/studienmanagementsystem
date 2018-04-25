@@ -17,9 +17,12 @@ class PatientsController extends Controller
     {
         $title = "Meine Patienten";
         $subtitle = "Wählen Sie einen Patienten aus";
+        $crfs = DB::select(DB::raw("SELECT * FROM Papatient Pa, Patient_Studie Ps, Ststudie St, crf_studie Cs, crf Cr 
+        WHERE Pa.id = Ps.PaID AND Ps.StID = St.StID AND St.StID = Cs.StID AND Cs.CrID = Cr.CrID"));
 
         $papatients = Papatient::all();
-        return view('patients.patients')->with('papatients', $papatients)->with('title', $title)->with('subtitle', $subtitle);
+        $papatients = Papatient::orderBy('created_at', 'asc')->paginate(10);
+        return view('patients.patients')->with('papatients', $papatients)->with('crfs', $crfs)->with('title', $title)->with('subtitle', $subtitle);
     }
 
     /**
@@ -69,7 +72,13 @@ class PatientsController extends Controller
      */
     public function show($id)
     {
-        //
+        $title = "Patienten-Anzeige";
+        $subtitle = "Lassen Sie sich alles zu einem Patienten anzeigen";
+        $crf = DB::select(DB::raw("SELECT * FROM Papatient Pa, Patient_Studie Ps, Ststudie St, crf_studie Cs, crf Cr 
+        WHERE Pa.id = Ps.PaID AND Ps.StID = St.StID AND St.StID = Cs.StID AND Cs.CrID = Cr.CrID"));
+
+        $papatient = Papatient::find($id);
+        return view('patients.show')->with('papatient', $papatient)->with('title', $title)->with('crf', $crf)->with('subtitle', $subtitle);
     }
 
     /**
@@ -80,7 +89,8 @@ class PatientsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $papatient = Papatient::find($id);
+        return view('patients.edit')->with('patients', $papatient);
     }
 
     /**
@@ -104,5 +114,9 @@ class PatientsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function crfs() {
+
     }
 }

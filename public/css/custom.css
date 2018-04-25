@@ -1,3 +1,8 @@
+body {
+    background-image: url(background.jpg);
+    opacity: 0.7;
+}
+
 button {
     margin-top: 10px;
     margin-right: 20px;
@@ -48,8 +53,14 @@ button {
     border-radius: 8px;
     background-color: silver;
     margin-top: 20px;
-    padding-left: 40px;
+    padding-left: 15px;
     padding-top: 10px;
+    padding-bottom: 7px;
+    font-size: 10px;
+}
+
+#single-patient:hover {
+    background-color: darkgray;
 }
 
 #btnEdit {
@@ -63,4 +74,18 @@ button {
 
 #single-patient-name {
     margin-top: 7px;
+}
+
+#patient-table {
+    padding-top: 12px;
+    padding-right: 15px;
+}
+
+#crf-span {
+    margin-top: 12px;
+}
+
+#crf-resumebtn {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
